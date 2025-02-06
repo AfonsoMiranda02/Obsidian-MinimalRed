@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root {
+    --base: #171a23; /*sidebar-bg*/
+    --surface: #171a23; /* bg */
+    --overlay: #53555a; /* theme-popup-bg */
+    /* --muted: #ff0303; theme-popup-border */
+    --muted: #bab3aa; /* theme-popup-border */
+    --subtle: #908caa; /* sidebar-fg */
+    --text: #d7d8d7; /* fg */
+    --love: #b921b1c7; /* sidebar-active */
+    --gold: #f6c177; /* links */
+    --rose: #ebbcba; /* inline-code-color */
+    --pine: #31748f; /* icons */
+    --foam: #9ccfd8; /* icons-hover (no direct match, using closest) */
+    --iris: #c4a7e7; /* icons-hover */
+    --puple: #15182b;
+    --gray:#242a36;
+    --red:#f03d2f;
+    --code-bg:#242a36;
+    --red2:#8d1a11;
+    --white: #fff;
+    --black: #24252a;
+    --family: "Geist", sans-serif; /* font */
+    --highlight-low: #21202e; /* theme-hover */
+    --highlight-med: #403d52; /* sidebar-spacer */
+    --highlight-high: #524f67; /* sidebar-non-existant */
+    --text-highlight-bg:var(--red2);
+    --bold:#bdb2a9;
+    --italic-color:#bdb2a9;
+
+    /* Dawn Color Palette */
+    --light-base: #d4954c;
+    --light-surface: #fffaf3;
+    --light-overlay: #f2e9e1;
+    --light-muted: #9893a5;
+    --light-subtle: #797593;
+    --light-text: #575279;
+    --light-love: #b4637a;
+    --light-gold: #ea9d34;
+    --light-rose: #d7827e;
+    --light-pine: #286983;
+    --light-foam: #56949f;
+    --light-iris: #907aa9;
+    --light-highlight-low: #f4ede8;
+    --light-highlight-med: #dfdad9;
+    --light-highlight-high: #cecacd;
+}
+
+.theme-dark {
+    /* Adapted Theme Colors */
+    --background-primary: var(--base);
+    --background-secondary: var(--surface);
+    --table-row:var(--gray);
+    --site-name-color:var(--red);
+    --background-modifier-border: var(--overlay);
+    --tab-text-color: var(--love);
+    --modal-background: var(--puple);
+    --modal-border-color: var(--black);
+    --status-bar-background:var(--gray);
+    --titlebar-background:var(--gray);
+    --titlebar-background-focused:var(--mutted);
+    /* --scrollbar-bg:var(--red); */
+    --scrollbar-thumb-bg:var(--red2);
+    --scrollbar-active-thumb-bg:var(--red);
+    --sidebar-active:var(--red);
+    --font-text-theme: var(--family);
+    --text-normal: var(--text);
+    --text-muted: var(--muted);
+    --text-accent: var(--red);
+    --text-accent-hover: var(--red2);
+    --tag-color: var(--red);
+    --tag-color-hover: var(--red2);
+    --tag-background: var(--overlay);
+    --graph-node:var(--red);
+    --graph-node-unresolved: var(--red);
+    --graph-node-focused:var(--red2);
+    --graph-text:var(--rose);
+    --h1-color: var(--red);
+    --h2-color: var(--red);
+    --h3-color: var(--red);
+    --h4-color: var(--red);
+    --h5-color: var(--red);
+    --h6-color: var(--red);
+    --code-normal: var(--subtle);
+    --code-background: var(--gray);
+    --text-selection: rgba(49, 116, 143, 0.6); /* --pine */
+    --flashing-background: rgba(235, 111, 146, 0.3); /* --love */
+    --link-color: var(--red);  
+    --link-url-hover: var(--red2);
+    --bold-color: var(--bold);
+}
+/* TODO: White Mode */
+.theme-light {
+    /* Light Theme Colors */
+    /* --background-primary: var(--light-base);
+    --background-secondary: var(--light-surface);
+    --background-modifier-border: var(--light-overlay);
+    --vault-profile-color:var(--red);
+    --text-normal: var(--light-text);
+    --text-muted: var(--light-muted);
+    --text-accent: var(--light-love);
+    --sidebar-right-background:var(--red);
+    --text-accent-hover: var(--light-foam);
+    --tag-color: var(--light-iris);
+    --tag-background: var(--light-overlay);
+    --h1-color: var(--light-love);
+    --h2-color: var(--light-gold);
+    --h3-color: var(--light-pine);
+    --h4-color: var(--light-foam);
+    --h5-color: var(--light-iris);
+    --h6-color: var(--light-rose);
+    --code-normal: var(--light-subtle);
+    --code-background: var(--light-highlight-low);
+    --text-selection: rgba(40, 105, 131, 0.6);  --light-pine 
+    --flashing-background: rgba(180, 99, 122, 0.3); --light-love
+    --link-url: var(--light-pine);
+    --link-url-hover: var(--light-iris);
+    --bold-color: var(--light-subtle); */
+}
+
+body.theme-dark {
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+}
+
+body.theme-light {
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+}
+
+/* blur background when pop-ups are active */
+body .modal {
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+body .modal .prompt-results {
+  padding: calc((1rem * 2) * 1);
+}
+body .modal-bg {
+  /* backdrop-filter: blur(8px); */ /* causes slowdowns */
+  background-color: rgb(8, 8, 8);
+}
+
+/* Side Bar */
+.sidebar-toggle-button.mod-left {
+    background-color: var(--red);/*Comment or remove this to remove the red square in the top right*/
+    --component-title-color:var(--white);
+  }
+
+/* DARKEN GRAPH VIEW LINS */
+.graph-view.color-line {
+    color: var(--red2);
+  }
+
+/* Headings */
+h1 { color: var(--h1-color); }
+h2 { color: var(--h2-color); }
+h3 { color: var(--h3-color); }
+h4 { color: var(--h4-color); }
+h5 { color: var(--h5-color); }
+h6 { color: var(--h6-color); }
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: var(--link-decoration);
+}
+a:hover {
+    color: var(--link-url-hover);
+    text-decoration: var(--link-decoration-hover);
+}
+
+/* Tags */
+.tag {
+    color: var(--tag-color);
+    background-color: var(--tag-background);
+    padding: var(--tag-padding-y) var(--tag-padding-x);
+    border-radius: var(--tag-radius);
+}
+.tag:hover {
+    text-decoration: var(--tag-decoration-hover);
+}
+
+/* Tables */
+table {
+    border: 1px solid var(--table-row);
+    border-collapse: collapse;
+}
+thead {
+    border-bottom: 2px solid var(--table-row);
+}
+th {
+    font-weight: var(--bold-weight);
+    border: 1px solid var(--table-row);
+}
+td {
+    border: 1px solid var(--table-row);
+}
+.markdown-rendered tbody tr:nth-child(even) {
+    background-color: var(--table-row-even-background);
+}
+.markdown-rendered tbody tr:nth-child(odd) {
+    background-color: var(--table-row-odd-background);
+}
+.markdown-rendered tbody tr:hover {
+    background-color: var(--table-row-background-hover);
+}
+
+/* Highlights */
+.markdown-rendered mark {
+    background-color: var(--text-highlight-bg);
+    color: var(--text-highlight-fg);
+}
+.markdown-rendered mark a {
+    color: var(--rose);
+    font-weight: var(--bold-weight);
+}
+
+/* Checkboxes */
+input[type=checkbox] {
+    border: 1px solid var(--checkbox-border-color);
+}
+input[type=checkbox]:checked {
+    background-color: var(--checkbox-color);
+    box-shadow: inset 0 0 0 2px var(--background-primary);
+}
+input[type=checkbox]:checked:after {
+    display: none;
+}
+
+/* Code Blocks */
+code[class*="language-"], pre[class*="language-"] {
+    line-height: var(--line-height-tight);
+    background-color: var(--code-background);
+    color: var(--code-normal);
+}
+
+.cm-line .cm-strong {
+    color: var(--bold-color) !important;
+}
