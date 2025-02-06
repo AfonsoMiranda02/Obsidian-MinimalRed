@@ -6,7 +6,7 @@
 
 # Theme Installation
 To install the theme:
-  -Clone this repository in your .themes directory
-  -Open Obsidian Settings
-  -Go to Appearance and click Default
-  -Select Minimal-Red from the list of themes
+  -Clone this repository in your ```.themes``` directory;
+  -Open Obsidian Settings;
+  -Go to Appearance and click Default;
+  -Select Minimal-Red from the list of themes;
