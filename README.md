@@ -1,6 +1,6 @@
 # Obsidian-MinimalRed
 
-![alt text](image.png)
+![alt text](cover.png)
 
 **Minimal Red** is an [Obsidian](https://obsidian.md/) theme,compatible with PCs, tablets, and mobile devices.
 
