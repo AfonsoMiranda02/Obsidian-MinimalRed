@@ -1,4 +1,4 @@
-# Obsidian-MinimalRed
+# MinimalRed
 
 ![alt text](cover.png)
 
