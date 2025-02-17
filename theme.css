@@ -31,8 +31,13 @@
     --highlight-med: #403d52; /* sidebar-spacer */
     --highlight-high: #524f67; /* sidebar-non-existant */
     --text-highlight-bg:var(--red2);
-    --bold:#bdb2a9;
-    --italic-color:#bdb2a9;
+    --bold:#be2a20;
+    --italic-color:#968578;
+    --radius-xl: 16px;
+    --radius-x: 12px;
+    --radius-l: 8px;
+    --radius-m: 6px;
+    --radius-s: 4px;
 
     /* Dawn Color Palette */
     --light-base: #d4954c;
@@ -53,13 +58,17 @@
 }
 
 .theme-dark {
+    /* Radius */
+    --tag-radius: var(--radius-xl);
+    --callout-radius: var(--radius-m);
+    --code-radius: var(--radius-m);
     /* Adapted Theme Colors */
     --background-primary: var(--base);
     --background-secondary: var(--surface);
     --table-row:var(--gray);
     --site-name-color:var(--red);
     --background-modifier-border: var(--overlay);
-    --tab-text-color: var(--love);
+    --tab-text-color: var(--red);
     --modal-background: var(--puple);
     --modal-border-color: var(--black);
     --status-bar-background:var(--gray);
@@ -234,13 +243,70 @@ input[type=checkbox]:checked:after {
     display: none;
 }
 
-/* Code Blocks */
-code[class*="language-"], pre[class*="language-"] {
-    line-height: var(--line-height-tight);
-    background-color: var(--code-background);
-    color: var(--code-normal);
+/* Border Radius */
+.workspace-tab-header {
+    border-radius: var(--radius-x) var(--radius-x) 0 0 !important;
 }
 
-.cm-line .cm-strong {
-    color: var(--bold-color) !important;
+/* .workspace-ribbon {
+    border-radius: 0 12px 12px 0 !important;
+} */
+
+.workspace-leaf, 
+.workspace-split,
+.view-header,
+.modal {
+    border-radius: var(--radius-xl) !important;
+}
+
+/*================================================*/
+/* Table
+/*================================================*/
+
+.markdown-rendered table {
+	margin-right: calc(50% - 100% / 2);
+	margin-left: calc(50% - 100% / 2);
+	border-radius: var(--radius-l);
+	text-align: center;
+	overflow: hidden;
+	margin: 0 auto;
+	width: 100%;
+	-webkit-box-shadow: inset 0px 0px 0px 1px var(--table-border-color);
+	-moz-box-shadow: inset 0px 0px 0px 1px var(--table-border-color);
+	box-shadow: inset 0px 0px 0px 1px var(--table-border-color);
+}
+
+table,
+table > tr > td,
+table th,
+table thead tr > th:first-child,
+table thead tr > th,
+table thead tr > th:last-child,
+td,
+th,
+thead tr > th:first-child,
+thead tr > th,
+thead tr > th:last-child {
+	text-align: center;
+}
+
+.table-view-table > thead > tr > th {
+	border: 0;
+}
+
+table.table-view-table,
+.table-view-table > tbody > tr > td {
+	border: 1px solid var(--table-border-color);
+}
+.markdown-rendered th {
+	-webkit-box-shadow: inset 0px 0px 0px 1px var(--table-border-color);
+	-moz-box-shadow: inset 0px 0px 0px 1px var(--table-border-color);
+	box-shadow: inset 0px 0px 0px 1px var(--table-border-color);
+}
+th,
+.markdown-rendered thead tr > th:nth-child(2n + 2) {
+	background-color: var(--th-bg);
+	font-weight: 700;
+	text-align: center;
+	padding: 8px 0;
 }
